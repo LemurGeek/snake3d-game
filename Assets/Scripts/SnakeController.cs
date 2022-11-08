@@ -56,7 +56,7 @@ public class SnakeController : MonoBehaviour
             index++;
         }
     }
-    void GrowSnake()
+    public void GrowSnake()
     {
         GameObject body = Instantiate(bodyPrefab);
         bodyParts.Add(body);
