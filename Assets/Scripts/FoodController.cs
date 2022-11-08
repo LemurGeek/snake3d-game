@@ -28,6 +28,11 @@ public class FoodController : MonoBehaviour
         Destroy(gameObject, lifeTime);
     }
 
+    private void Update()
+    {
+        this.transform.Rotate(0f, 10f * Time.deltaTime, 0f, Space.Self);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
