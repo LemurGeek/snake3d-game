@@ -16,6 +16,9 @@ public class SnakeController : MonoBehaviour
     [SerializeField]
     int gap = 100;
 
+    [SerializeField]
+    int bodyPartAmount = 5;
+
     Rigidbody rb;
 
     float xDirection;
@@ -27,7 +30,7 @@ public class SnakeController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < bodyPartAmount; i++)
         {
             GrowSnake();
         }
