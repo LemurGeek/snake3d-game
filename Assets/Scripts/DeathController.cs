@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+
 
 public class DeathController : MonoBehaviour
 {
@@ -9,6 +12,12 @@ public class DeathController : MonoBehaviour
 
     [SerializeField]
     Canvas DeathUI;
+
+    [SerializeField]
+    Text scoreText;
+
+    SessionManager session;
+
 
     LevelController Escena;
 
@@ -18,6 +27,7 @@ public class DeathController : MonoBehaviour
     {
         Escena = GameObject.FindGameObjectWithTag("Change").GetComponent<LevelController>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<SnakeController>();
+        session = SessionManager.GetInstancia() as SessionManager;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -36,10 +46,15 @@ public class DeathController : MonoBehaviour
         }
     }
 
-    void GameOver() {
-        if (Player != null) {
+    void GameOver()
+    {
+        if (Player != null)
+        {
             Player.DeathSnake();
         }
+
+
+        scoreText.text = string.Format(scoreText.text, session.GetScore().ToString());
         DeathUI.gameObject.SetActive(true);
     }
 }

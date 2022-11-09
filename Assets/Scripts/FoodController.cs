@@ -22,10 +22,13 @@ public class FoodController : MonoBehaviour
     bool isExpired = true;
 
     GameObject player;
+    SessionManager session;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
         Destroy(gameObject, lifeTime);
+        session = SessionManager.GetInstancia() as SessionManager;
     }
 
     private void Update()
@@ -41,15 +44,15 @@ public class FoodController : MonoBehaviour
             Destroy(gameObject);
 
             //Igualmente me gustaria cambiar el nombre a Rock o Obstacle
-            if (this.collectibleType.ToString().Equals("POISON")) {
-                //Remover Puntaje Marcador
+            if (this.collectibleType.ToString().Equals("POISON"))
+            {
+                session.AddScore(expireValue);
             }
 
             //Me gustaria cambiar el nombre a food o apple
             if (this.collectibleType.ToString().Equals("COLLECTIBLE"))
             {
-                //Agregar Puntaje Marcador
-                //codigo
+                session.AddScore(collectibleValue);
                 player.GetComponent<SnakeController>().GrowSnake();
             }
         }
