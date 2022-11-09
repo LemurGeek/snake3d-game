@@ -26,6 +26,8 @@ public class SnakeController : MonoBehaviour
     List<GameObject> bodyParts = new List<GameObject>();
     List<Vector3> positionHistory = new List<Vector3>();
 
+    private bool isPlaying = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,6 +40,7 @@ public class SnakeController : MonoBehaviour
 
     void Update()
     {
+        if (!isPlaying) return;
         xDirection = Input.GetAxisRaw("Horizontal");
         
         rb.transform.position += rb.transform.forward * moveSpeed * Time.deltaTime;
@@ -63,5 +66,9 @@ public class SnakeController : MonoBehaviour
     {
         GameObject body = Instantiate(bodyPrefab);
         bodyParts.Add(body);
+    }
+
+    public void DeathSnake() {
+        isPlaying = false;
     }
 }
