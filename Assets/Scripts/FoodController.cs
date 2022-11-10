@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FoodController : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class FoodController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
         Destroy(gameObject, lifeTime);
         session = SessionManager.GetInstancia() as SessionManager;
+
+
     }
 
     private void Update()
@@ -57,4 +60,5 @@ public class FoodController : MonoBehaviour
             }
         }
     }
+
 }

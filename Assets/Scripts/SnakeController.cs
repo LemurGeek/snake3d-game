@@ -28,6 +28,9 @@ public class SnakeController : MonoBehaviour
 
     private bool isPlaying = true;
 
+
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

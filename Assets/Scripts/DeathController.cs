@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,9 +15,16 @@ public class DeathController : MonoBehaviour
     Canvas DeathUI;
 
     [SerializeField]
-    Text scoreText;
+    TextMeshProUGUI score;
+
+
+    [SerializeField]
+    TextMeshProUGUI finalscore;
+
 
     SessionManager session;
+
+
 
 
     LevelController Escena;
@@ -25,10 +33,19 @@ public class DeathController : MonoBehaviour
 
     void Start()
     {
+        
         Escena = GameObject.FindGameObjectWithTag("Change").GetComponent<LevelController>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<SnakeController>();
         session = SessionManager.GetInstancia() as SessionManager;
     }
+
+
+    private void Update()
+    {
+        score.text = session.GetScore().ToString();
+    }
+
+
 
     void OnCollisionEnter(Collision collision)
     {
@@ -54,7 +71,9 @@ public class DeathController : MonoBehaviour
         }
 
 
-        scoreText.text = string.Format(scoreText.text, session.GetScore().ToString());
+        finalscore.text = session.GetScore().ToString();
         DeathUI.gameObject.SetActive(true);
     }
+
+
 }
