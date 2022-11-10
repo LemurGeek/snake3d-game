@@ -9075,7 +9075,7 @@ PrefabInstance:
     - target: {fileID: 5020630458893835484, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}
       propertyPath: gap
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5020630458893835484, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}
@@ -9091,7 +9091,7 @@ PrefabInstance:
     - target: {fileID: 5020630458893835484, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}
       propertyPath: bodyPartAmount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5020630458893835486, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}
