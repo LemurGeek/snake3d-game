@@ -4101,6 +4101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604837192767665805, guid: 01f8611aa8db8d640b79c8e0eff5d519,
         type: 3}
+      propertyPath: spawnTimeFrame
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604837192767665805, guid: 01f8611aa8db8d640b79c8e0eff5d519,
+        type: 3}
       propertyPath: collectibles.Array.data[0]
       value: 
       objectReference: {fileID: 9095056519343326589, guid: eb99d0f244d235748910f0090496c840,
@@ -7956,7 +7961,7 @@ PrefabInstance:
     - target: {fileID: 5020630458893835484, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}
       propertyPath: bodyPartAmount
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5020630458893835486, guid: bbbd3e121cfb4eb4b9dc5c79c7507151,
         type: 3}

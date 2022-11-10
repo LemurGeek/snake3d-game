@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+
+    [SerializeField]
+    int maxSceneIndex = 3;
+
     public Animator animator;
 
     private int levelToLoad;
@@ -30,7 +34,12 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 
-
+    public void FadetoLevelRandom() {
+        
+        levelToLoad = Random.Range(1, maxSceneIndex);
+        Debug.Log(string.Format("Changing level: {0}",levelToLoad));
+        animator.SetTrigger("FadeOut");
+    }
 
     
 }
