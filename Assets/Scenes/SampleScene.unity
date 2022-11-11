@@ -8369,6 +8369,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 9128098344795087184, guid: eb3eb5bbf9eafa742aaf9b6d502a6e8f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128098344795087184, guid: eb3eb5bbf9eafa742aaf9b6d502a6e8f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5404586243222015059, guid: 7e3e4d1e288263c408764c1b6fa9f222,
+        type: 3}
+    - target: {fileID: 9128098344795087184, guid: eb3eb5bbf9eafa742aaf9b6d502a6e8f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeToLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 9213192878111658265, guid: eb3eb5bbf9eafa742aaf9b6d502a6e8f,
         type: 3}
       propertyPath: m_RootOrder
